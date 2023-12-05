@@ -19,7 +19,7 @@ public class Main {
             System.out.println("ArithmeticException: " + e.getMessage());
         }
 
-        //задание 2
+
         try {
             String word = "друг";
             String text = "друг для всех — друг никому";

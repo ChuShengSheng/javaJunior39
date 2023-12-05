@@ -16,7 +16,7 @@ public interface IMatrix {
 	/**
 	 * Возвращает количество строк матрицы
 	 * 
-	 * @return количесвто строк матрицы
+	 * @return количество строк матрицы
 	 */
 	int getRows();
 	
@@ -93,13 +93,13 @@ public interface IMatrix {
 	
 	/**
 	 * Возвращает транспонированную матрицу по отношению к текущей
-	 * 
+	 *
 	 * @return транспонированная матрица по отношению к текущей
 	 */
-	IMatrix transpose();
+	Matrix transpose();
 	
 	/**
-	 * Заполняет текущю матрицу заднным значением
+	 * Заполняет текущую матрицу заданным значением
 	 * 
 	 * @param value значение
 	 */
@@ -114,22 +114,22 @@ public interface IMatrix {
 	double determinant();
 	
 	/**
-	 * Проверяет является ли текущая матрица нулевой<br/>
+	 * Проверяет, является ли текущая матрица нулевой<br/>
 	 * Нулевая матрица - матрица у которой все элементы нули:
-	 * 
+	 *
 	 * <table>
 	 * <tr><td>&nbsp;&nbsp;0&nbsp;&nbsp;</td><td>&nbsp;&nbsp;0&nbsp;&nbsp;</td><td>&nbsp;&nbsp;0&nbsp;&nbsp;</td><td>&nbsp;&nbsp;0&nbsp;&nbsp;</td></tr>
 	 * <tr><td>&nbsp;&nbsp;0&nbsp;&nbsp;</td><td>&nbsp;&nbsp;0&nbsp;&nbsp;</td><td>&nbsp;&nbsp;0&nbsp;&nbsp;</td><td>&nbsp;&nbsp;0&nbsp;&nbsp;</td></tr>
 	 * <tr><td>&nbsp;&nbsp;0&nbsp;&nbsp;</td><td>&nbsp;&nbsp;0&nbsp;&nbsp;</td><td>&nbsp;&nbsp;0&nbsp;&nbsp;</td><td>&nbsp;&nbsp;0&nbsp;&nbsp;</td></tr>
 	 * <tr><td>&nbsp;&nbsp;0&nbsp;&nbsp;</td><td>&nbsp;&nbsp;0&nbsp;&nbsp;</td><td>&nbsp;&nbsp;0&nbsp;&nbsp;</td><td>&nbsp;&nbsp;0&nbsp;&nbsp;</td></tr>
 	 * </table>
-	 * 
+	 *
 	 * @return <b>true</b> если текущая матрица нулевая
 	 */
 	boolean isNullMatrix();
 	
 	/**
-	 * Проверяет является ли текущая матрица единичной<br/>
+	 * Проверяет, является ли текущая матрица единичной<br/>
 	 * Единичная матрица - матрица у которой на главной диагонали единицы, а остальные элементы нули:
 	 * 
 	 * <table>
@@ -144,7 +144,7 @@ public interface IMatrix {
 	boolean isIdentityMatrix();
 	
 	/**
-	 * Проверяет является ли текущая матрица квадратной. <br/>
+	 * Проверяет, является ли текущая матрица квадратной. <br/>
 	 * Т.е. матрица у которой количество строк равно количеству столбцов<br/>
 	 * 
 	 * @return <b>true</b> если текущая матрица квадратная

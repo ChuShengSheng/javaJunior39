@@ -20,7 +20,7 @@ public class PrintEdition {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName() {
         this.name = name;
     }
 
@@ -28,7 +28,7 @@ public class PrintEdition {
         return year;
     }
 
-    public void setYear(int year) {
+    public void setYear() {
         this.year = year;
     }
 
@@ -36,19 +36,21 @@ public class PrintEdition {
         return izdatelstvo;
     }
 
-    public void setIzdatelstvo(String izdatelstvo) {
+    public void setIzdatelstvo() {
         this.izdatelstvo = izdatelstvo;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (o == null || getClass() != o.getClass())
+            return false;
 
         PrintEdition that = (PrintEdition) o;
 
         if (year != that.year) return false;
-        if (!Objects.equals(name, that.name)) return false;
+        if (!Objects.equals(name, that.name))
+            return false;
         return Objects.equals(izdatelstvo, that.izdatelstvo);
     }
 

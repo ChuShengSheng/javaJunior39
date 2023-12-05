@@ -1,5 +1,7 @@
 package test;
 
+import java.util.Arrays;
+
 public class Matrix implements IMatrix {
 
     private double[][] nums;
@@ -14,6 +16,21 @@ public class Matrix implements IMatrix {
         } else {
             nums = new double[row][col];
         }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Matrix matrix = (Matrix) o;
+
+        return Arrays.deepEquals(nums, matrix.nums);
+    }
+
+    @Override
+    public int hashCode() {
+        return Arrays.deepHashCode(nums);
     }
 
     @Override
@@ -104,7 +121,7 @@ public class Matrix implements IMatrix {
     }
 
     @Override
-    public IMatrix transpose() {
+    public Matrix transpose() {
         Matrix result = new Matrix(this.getColumns(), this.getRows());
         for (int i = 0; i < result.getRows(); i++) {
             for (int j = 0; j < result.getColumns(); j++) {
@@ -196,7 +213,6 @@ public class Matrix implements IMatrix {
         }
         return true;
     }
-
 
     @Override
     public boolean isSquareMatrix() {
