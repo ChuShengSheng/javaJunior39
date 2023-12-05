@@ -6,6 +6,7 @@ import org.junit.Test;
 
 public class MatrixTest extends TestCase {
 
+
     public void testGetRows1() {
         double[][] forTestGetRows = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
         Matrix matrix = new Matrix(forTestGetRows);
